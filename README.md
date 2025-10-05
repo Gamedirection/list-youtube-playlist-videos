@@ -21,3 +21,6 @@ https://www.youtube.com/watch?v=xxxxxxx
 https://www.youtube.com/watch?v=yyyyyyy
 ...
 ```
+
+## Make executable
+`chmod +x list_youtube_playlist_videos`

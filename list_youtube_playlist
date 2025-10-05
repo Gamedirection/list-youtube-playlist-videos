@@ -8,4 +8,4 @@ if [ -z "$PLAYLIST_URL" ]; then
 fi
 
 # Prints all video URLs in the playlist
-yt-dlp -j --flat-playlist "$PLAYLIST_URL" | jq -r '.url' | sed 's#^#https://www.youtube.com/watch?v=#'
+yt-dlp -j --flat-playlist "$PLAYLIST_URL" | jq -r '.url'
