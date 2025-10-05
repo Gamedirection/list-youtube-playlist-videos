@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PLAYLIST_URL="$1"
+
+if [ -z "$PLAYLIST_URL" ]; then
+  echo "Usage: $0 <playlist_url>"
+  exit 1
+fi
+
+# Prints all video URLs in the playlist
+yt-dlp -j --flat-playlist "$PLAYLIST_URL" | jq -r '.url' | sed 's#^#https://www.youtube.com/watch?v=#'
